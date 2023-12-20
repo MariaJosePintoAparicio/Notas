@@ -24,20 +24,22 @@ while (isActive):
             print (alumnos)
             os.system("pause")   
         elif (opMenu == 2): 
-            opNotas = 0
-            isActiveGrades = True
-            while isActiveGrades:
-                try:
-                    opNotas = int(menu.menuNotas())
-                except ValueError:
-                    print("error en el dato de ingreso")
-                    os.system("pause")
-                else:
-                    if (opNotas == 1): 
-                        pass
+            # opNotas = 0
+            # isActiveGrades = True
+            # while isActiveGrades:
+            #     try:
+            #         opNotas = int(menu.menuNotas())
+            #     except ValueError:
+            #         print("error en el dato de ingreso")
+            #         os.system("pause")
+            #     else:
+            #         if (opNotas == 1): 
+            #             registroNotas ()
+            codigo = input("ingrese el codigo a buscar : ") 
+            menu.menuNotas(st.buscar(codigo,alumnos))       
         elif (opMenu == 3):
             codAlumno = input("ingrese el codigo a buscar : ")
-            st.buscarAlumno(codAlumno,alumnos) 
+            st.buscarAlumno (codAlumno ,alumnos) 
             os.system("pause")
         elif (opMenu == 4):
-             isActive = False
+             isActive = False 

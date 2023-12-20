@@ -17,9 +17,16 @@ def regAlumnos() -> dict:
 def buscarAlumno(codAlumno : str , alumnos:dict):
     data = alumnos.get(codAlumno, -1)
     if (type (data) == dict):
-        for llave,valor in data.items():
+        for llave,valor in data.items(): 
          print(f"{llave} : {valor}")
         os.system 
     else:
       print ("no se encontro el estuduante con el codigo {codAlumno}")
       os.system("pause")
+def buscar(codAlumno : str, alumnos : dict )->dict:
+   data = alumnos.get(codAlumno,-1)
+   if(type(data)==dict):
+      return data
+   else:
+      print (f"nop se encontro el estudiantecon el cofigo {codAlumno} ") 
+      os.system("pause")    
